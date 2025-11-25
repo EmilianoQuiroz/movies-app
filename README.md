@@ -1,4 +1,14 @@
-# Welcome to your Expo app 👋
+# React Native Movies App 🍿
+
+## Documentation
+
+[Notion](https://broken-math-a89.notion.site/Movies-App-React-Native-2b65fecad6e8802cbb22cf595e66daf5)
+
+##
+## Authors
+
+- [@EmilianoQuiroz](https://github.com/EmilianoQuiroz/)
+
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
