@@ -1,6 +1,8 @@
+import { nowPlayingAction } from "@/core/actions/movies/now-playing.action";
 import { Text, View } from "react-native";
 
 export default function Index() {
+  nowPlayingAction();
   return (
     <View
       style={{
@@ -9,7 +11,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="font-semibold text-3xl">Movies App</Text>
+      <Text className="text-3xl font-semibold">Movies App</Text>
     </View>
   );
 }
