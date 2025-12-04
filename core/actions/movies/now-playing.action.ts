@@ -7,7 +7,7 @@ export const nowPlayingAction = async () => {
     const { data } = await movieApi.get<MovieDBMoviesResponse>("/now_playing");
     const movies = data.results.map(MovieMapper.fromTheMovieDBToMovie);
     console.log(movies);
-    return [movies];
+    return movies;
   } catch (error) {
     console.log(error);
     throw "Error fetching now playing movies";

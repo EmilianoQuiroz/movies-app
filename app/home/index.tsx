@@ -1,3 +1,4 @@
+import MainSlidesShow from "@/presentation/components/movies/MainSlidesShow";
 import { useMovies } from "@/presentation/hooks/useMovies";
 import React from "react";
 import { ActivityIndicator, Text, View } from "react-native";
@@ -22,6 +23,10 @@ const HomeScreen = () => {
     <View className="mt-2" style={{ marginTop: safeArea.top }}>
       {/* Renderizamos la lista de películas u otro contenido aquí */}
       <Text className="px-4 mb-2 text-3xl font-bold">Home Screen</Text>
+      {/* Carrousel de imagenes */}
+      <MainSlidesShow
+        movies={nowPlayingQuery.data ?? []}
+      />
     </View>
   );
 };
