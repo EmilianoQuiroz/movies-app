@@ -21,10 +21,10 @@ const MainSlidesShow = ({ movies }: Props) => {
           <MoviePoster id={item.id} poster={item.poster} />
         )}
         width={200}
-        height={350}
+        height={250}
         style={{
           width: width,
-          height: 350,
+          height: 250,
           justifyContent: "center",
           alignItems: "center",
         }}
