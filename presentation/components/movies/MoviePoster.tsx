@@ -12,11 +12,14 @@ const MoviePoster = ({ id, poster, smallPoster = false, className = '' }: Props)
     <Pressable className={`px-2 active:opacity-70 ${className}`}>
       <Image
         source={{ uri: poster }}
-        className="w-full h-full shadow-2xl rounded-xl"
+        className="w-full h-full shadow-2xl"
         style={{
           width: smallPoster ? 85 : 150,
           height: smallPoster ? 130 : 250,
-          borderRadius: 10,
+          marginRight: 15,
+          marginTop: 10,
+          marginBottom: 15 ,
+          borderRadius: 20,
         }}
         resizeMode="cover"
       />
