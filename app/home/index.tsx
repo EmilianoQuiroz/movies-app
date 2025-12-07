@@ -34,17 +34,20 @@ const HomeScreen = () => {
         <MainSlidesShow movies={nowPlayingQuery.data ?? []} />
         <HorizontalSlides
           title="Popular"
-          movies={popularMoviesQuery.data ?? []}
+          movies={popularMoviesQuery.data?.pages.flat() ?? []}
+          loadNextPage={popularMoviesQuery.fetchNextPage}
         />
         {/** Top Rated */}
         <HorizontalSlides
           title="Top Rated"
-          movies={topRatedMoviesQuery.data ?? []}
+          movies={topRatedMoviesQuery.data?.pages.flat() ?? []}
+          loadNextPage={topRatedMoviesQuery.fetchNextPage}
         />
         {/** Coming soon */}
         <HorizontalSlides
           title="Coming Soon"
-          movies={comingSoonMoviesQuery.data ?? []}
+          movies={comingSoonMoviesQuery.data?.pages.flat() ?? []}
+          loadNextPage={comingSoonMoviesQuery.fetchNextPage}
         />
       </View>
     </ScrollView>
