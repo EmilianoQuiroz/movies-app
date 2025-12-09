@@ -9,10 +9,12 @@ const queryClient = new QueryClient();
 
 export default function RootLayout() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <GestureHandlerRootView>
-        <Stack screenOptions={{ headerShown: false }} />
-      </GestureHandlerRootView>
-    </QueryClientProvider>
+    <GestureHandlerRootView>
+      <QueryClientProvider client={queryClient}>
+        <GestureHandlerRootView>
+          <Stack screenOptions={{ headerShown: false }} />
+        </GestureHandlerRootView>
+      </QueryClientProvider>
+    </GestureHandlerRootView>
   );
 }
